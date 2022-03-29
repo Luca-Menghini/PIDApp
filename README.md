@@ -1,2 +1,4 @@
 # PIDApp
-Pulse Intervals Detection App: An R Shiny app to detect and process pulse intervals from pothoplethismography-based blood volume pulse data
+Pulse Intervals Detection App: An R Shiny app to detect and process pulse intervals from pothoplethismography-based blood volume pulse data.
+
+# Work in progress...
