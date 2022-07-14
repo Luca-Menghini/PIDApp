@@ -1,6 +1,7 @@
 library(shiny)
 library(pracma)
 library(data.table)  ###################### interessante anche server(input,output,session)
+library(ggplot2)
 
 if(!exists("ibi_new")){
   ibi_new <- data.frame(t=numeric(1),IBI=numeric(1))
