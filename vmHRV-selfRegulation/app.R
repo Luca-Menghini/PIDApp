@@ -343,26 +343,27 @@ ui <- shinyUI(fluidPage(
                     verbatimTextOutput("feedback.hrv"),
                     hr(),
                     
-                    h3("Marca gli artefatti",
+                    h3("Mark artefacts",
                        style="font-weight: bold"),
-                    HTML("Dopo aver aggiunto i picchi al dataset, marca come artefatti
-                         quelli che ti sembrano anomali (prima devi aggiungerli al dataset!).<br><br>"),
-                    numericInput("artefact",label="Scegli un picco", 
+                    HTML("Select a peak from the Peaks plot and mark it as an artefact (note: the peak should be first added to the IBI dataset).<br><br>"),
+                    numericInput("artefact",label="Select a peak from the Peaks plot", 
                                  min=1,max=100000,value=1,width="50%"),
                     verbatimTextOutput("markWarning",placeholder=FALSE),
-                    actionButton("markArtefact"," Marca il picco come artefatto",
+                    actionButton("markArtefact"," Mark the peak as an artefact",
                                 style="background-color:#337AB7;color: white;",
                                 icon=icon("crosshairs")),
                     HTML("<br><br>"),
-                    actionButton("demarkArtefact"," Cancella il marker",
+                    actionButton("demarkArtefact"," Delete marker",
                                  style="background-color:#337AB7;color: white;",
                                  icon=icon("undo")),
                     hr(),
                     
-                    h3("Dataset IBI",
+                    h3("IBI dataset",
                        style="font-weight: bold"),
-                    HTML("<i>ampl</i> = ampiezza del segnale BVP
-                          <br><i>artefact</i> = picchi marcati come artefatti<br><br>"),
+                    HTML("<i>time</i> = peak timing
+                          <i>IBI</i> = interbeat interval
+                          <i>ampl</i> = BVP signal aplitude
+                          <br><i>artefact</i> = peaks marked as artefacts<br><br>"),
                     div(tableOutput("dataset"), style = "font-size:85%"),
                     hr(),
                     h3("Elimina un IBI",style="font-weight: bold"),
